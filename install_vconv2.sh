@@ -33,7 +33,7 @@ chmod 777 /vconv2/parametri.txt
 # CREAZIONE Share di rete
 mkdir /CONDIVISA
 cd /CONDIVISA
-mkdir FINAL video-IN  logo-IN video-OUT
+mkdir video-IN  logo-IN video-OUT
 chmod -R 777 /CONDIVISA/
 
 # configuro SAMBA
@@ -58,11 +58,9 @@ yyupdate-rc.d apache2 enable
 
 # installare le webpages
 cd /
-wget https://github.com/bizzarrone/vconv/raw/master/avconvweb.tar.gz
-cd / ; tar xvzf avconvweb.tar.gz
-rm /avconvweb.tar.gz
+wget https://github.com/bizzarrone/vconv2/raw/master/vconv2web.tar.gz
+cd / ; tar xvzf vconv2web.tar.gz
+rm /vconv2web.tar.gz
 chown -R www-data:www-data  /var/www/html
 rm /var/www/html/index.html
 
-# modifico il crontab
-echo "00,30 * * * * rm /CONDIVISA/*-OLD/*" > /var/spool/cron/crontabs/root
