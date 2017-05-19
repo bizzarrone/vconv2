@@ -12,7 +12,8 @@ dpkg-reconfigure locales
 
 # correggi ssh server
 #sed -i 's/PermitRootLogin no/PermitRootLogin yes/g' /etc/ssh/sshd_config
-echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
+#echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 service ssh restart
 
 # installo n2n
