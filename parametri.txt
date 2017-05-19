@@ -2,5 +2,5 @@
 5200k
 128k
 30
-medium
+superfast
 off
