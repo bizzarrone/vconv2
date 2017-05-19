@@ -63,4 +63,4 @@ cd / ; tar xvzf vconv2web.tar.gz
 rm /vconv2web.tar.gz
 chown -R www-data:www-data  /var/www/html
 rm /var/www/html/index.html
-
+reboot
